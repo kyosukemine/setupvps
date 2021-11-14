@@ -41,11 +41,11 @@ echo "<key>" >> /etc/openvpn/client//$client_name/config.ovpn
 cat /root/openvpn-certs/pki/private/$client_name.key | awk '/BEGIN/,/END/' >> /etc/openvpn/client//$client_name/config.ovpn
 echo "</key>" >> /etc/openvpn/client//$client_name/config.ovpn
 
-echo -n "copy  below text -and- "
+cat /etc/openvpn/client//$client_name/config.ovpn
+echo -n "copy  above text -and- "
 echo -n "create  config.ovpn  in your device -and- "
 echo "paste"
 
-cat /etc/openvpn/client//$client_name/config.ovpn
 # /root/openvpn-certs/pki/private/$client_name.key
 # /root/openvpn-certs/pki/issued/$client_name.crt
 
