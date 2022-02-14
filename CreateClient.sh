@@ -12,7 +12,7 @@ cat <<EOT
 - * - * - * - * - * - * - * - * -
 EOT
 cd ~/openvpn-certs
-echo "クライアントネームを入力してください"
+echo "Enter your client name"
 read client_name
 
 if [ ! -e /root/openvpn-certs/pki/private/$client_name.key ] &&  [ ! -e /root/openvpn-certs/pki/issued/$client_name.crt  ] ; then
